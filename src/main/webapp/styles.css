@@ -1,0 +1,33 @@
+nav {
+    background-color: lightgray;
+	height: 5vh;
+	display: flex;
+	align-items: center;
+	column-gap: 2vh;
+	padding-left: 2vh;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 5vh;
+}
+
+#nav-h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border: 1.5px solid black;
+}
+
+.red-txt {
+    color: red;
+}
+
+.green-txt {
+    color: #00d000;
+}
