@@ -22,14 +22,17 @@
         <h2>All Customers:</h2>
         <h4>Totoal Customers: <c:out value="${customerCount}" ></c:out></h4>
         <table>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>DOB</th>
-                <th>Email</th>
-                <th>Location</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${customers}" var="customer" >
                 <tr>
                     <td><c:out value="${customer.id}" ></c:out></td>
@@ -40,6 +43,7 @@
                     <td><c:out value="${customer.location}" ></c:out></td>
                 </tr>
             </c:forEach>
+            </tbody>
         </table>
     </c:if>
     

@@ -26,15 +26,18 @@
         <h2>All Customers:</h2>
 
         <table>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>DOB</th>
-                <th>Email</th>
-                <th>Location</th>
-                <th>Action</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${customers}" var="customer" >
                 <tr>
                     <td><c:out value="${customer.id}" ></c:out></td>
@@ -46,6 +49,7 @@
                     <td><a href="<c:url value='?id=${customer.id}' ></c:url>" >Delete</a></td>
                 </tr>
             </c:forEach>
+            </tbody>
         </table>
     </c:if>
     

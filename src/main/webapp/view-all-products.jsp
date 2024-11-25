@@ -15,22 +15,26 @@
 		
 	    <h2>All Products:</h2>
 	    <table>
-	        <tr>
-	            <th>Id</th>
-	            <th>Name</th>
-	            <th>Cost</th>
-	            <th>Description</th>
-	            <th>Image</th>
-	        </tr>
-	        <c:forEach items="${products}" var="product" >
-	            <tr>
-	                <td>${product.id}</td>
-	                <td>${product.name}</td>
-	                <td>${product.cost}</td>
-	                <td>${product.description}</td>
-	                <td><img src="/display-img?id=${product.id}" width="15%" /></td>
-	            </tr>
-	        </c:forEach>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Cost</th>
+					<th>Description</th>
+					<th>Image</th>
+				</tr>
+			</thead>
+			<tbody>
+			<c:forEach items="${products}" var="product" >
+				<tr>
+					<td>${product.id}</td>
+					<td>${product.name}</td>
+					<td>${product.cost}</td>
+					<td>${product.description}</td>
+					<td><img src="/display-img?id=${product.id}" width="15%" /></td>
+				</tr>
+			</c:forEach>
+			</tbody>
 	    </table>
 	</c:if>
 	
