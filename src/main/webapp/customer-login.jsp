@@ -4,8 +4,10 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Customer Login</title>
+<head>
+    <title>Customer Login</title>
+
+	<link rel="stylesheet" href="styles.css" type="text/css" >
 </head>
 <body>
     <%@include file="navbar.jsp" %>

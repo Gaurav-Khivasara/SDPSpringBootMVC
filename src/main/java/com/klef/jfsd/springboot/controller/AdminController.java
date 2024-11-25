@@ -146,11 +146,23 @@ public class AdminController {
 	}
 	
 	@GetMapping("/display-img")
-	public ResponseEntity<byte[]> displayImg(@RequestParam int id) throws SQLException {
-		Product product = service.displayProductById(id);
-		byte[] imgBytes = product.getImg().getBytes(1, (int) product.getImg().length());
+	public ResponseEntity<byte[]> displayImg(HttpServletRequest request, @RequestParam int id) throws SQLException {
+		if (request.getSession().getAttribute("admin") != null) {
+			Product product = service.displayProductById(id);
+			byte[] imgBytes = product.getImg().getBytes(1, (int) product.getImg().length());
 		
-		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imgBytes);		
+			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imgBytes);		
+		} else {
+			String html = """
+					<link rel="stylesheet" href="styles.css" type="text/css" >
+			        <h2>
+			            <div class="red-txt" >No Admin Logged in!</div>
+			            <a style="color: blue;" href="/admin-login" >Login</a>
+			            to view all customers.
+			        </h2>
+					""";
+			return ResponseEntity.badRequest().body(html.getBytes());
+		}
 	}
 	
 }

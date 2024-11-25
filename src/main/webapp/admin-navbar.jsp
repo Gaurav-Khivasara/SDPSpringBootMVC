@@ -4,6 +4,7 @@
 <html>
 <head>
 	<title>JFSD</title>
+	
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
@@ -14,6 +15,8 @@
 		<a href="/view-all-customers" >View All Customers</a>|
 		<a href="/view-customer-by-id" >View Customer (By ID)</a>|
 		<a href="/delete-customer" >Delete Customer</a>|
+		<a href="/add-product" >Add Product</a>|
+		<a href="/view-all-products" >View All Products</a>|
 		<a href="/admin-logout" >Logout</a>
 	</nav>
 </body>
